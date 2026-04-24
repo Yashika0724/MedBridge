@@ -4,7 +4,7 @@ India's medicine affordability finder. Type a branded medicine, instantly see it
 generic equivalent, compare prices, estimate yearly savings, and find the nearest
 Jan Aushadhi store.
 
-**Live demo:** _add your Vercel URL here_
+**Live demo:** https://med-bridge-black.vercel.app
 
 ## The problem
 
