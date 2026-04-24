@@ -17,6 +17,8 @@ export default function Header() {
         <nav className={`nav ${open ? 'open' : ''}`}>
           <NavLink to="/" end onClick={close}>Home</NavLink>
           <NavLink to="/search" onClick={close}>Search</NavLink>
+          <NavLink to="/scan" onClick={close}>Scan Rx</NavLink>
+          <NavLink to="/ask" onClick={close}>Ask AI</NavLink>
           <NavLink to="/why-generics" onClick={close}>Why Generics?</NavLink>
           <NavLink to="/stores" onClick={close}>Find Store</NavLink>
           <NavLink to="/about" onClick={close}>About</NavLink>

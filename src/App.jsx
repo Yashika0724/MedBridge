@@ -8,6 +8,8 @@ import MedicineDetail from './pages/MedicineDetail'
 import StoreLocator from './pages/StoreLocator'
 import WhyGenerics from './pages/WhyGenerics'
 import About from './pages/About'
+import ScanPrescription from './pages/ScanPrescription'
+import SymptomChecker from './pages/SymptomChecker'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -28,6 +30,8 @@ export default function App() {
           <Route path="/search" element={<Results />} />
           <Route path="/medicine/:id" element={<MedicineDetail />} />
           <Route path="/stores" element={<StoreLocator />} />
+          <Route path="/scan" element={<ScanPrescription />} />
+          <Route path="/ask" element={<SymptomChecker />} />
           <Route path="/why-generics" element={<WhyGenerics />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Home />} />

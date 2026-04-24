@@ -5,6 +5,7 @@ import CategoryPills from '../components/CategoryPills'
 import MedicineCard from '../components/MedicineCard'
 import medicines from '../data/medicines.json'
 import { searchMedicines } from '../lib/search'
+import { IconSpark } from '../components/Icons'
 
 export default function Results() {
   const [params, setParams] = useSearchParams()
@@ -14,6 +15,9 @@ export default function Results() {
   const [q, setQ] = useState(initialQ)
   const [debounced, setDebounced] = useState(initialQ)
   const [category, setCategory] = useState(initialCat)
+  const [aiResults, setAiResults] = useState(null)
+  const [aiReason, setAiReason] = useState('')
+  const [aiBusy, setAiBusy] = useState(false)
 
   useEffect(() => {
     const t = setTimeout(() => setDebounced(q), 180)
@@ -32,6 +36,35 @@ export default function Results() {
     [debounced, category]
   )
 
+  useEffect(() => {
+    setAiResults(null)
+    setAiReason('')
+    if (!debounced || debounced.length < 3) return
+    if (results.length > 0) return
+
+    let cancelled = false
+    setAiBusy(true)
+    fetch('/api/search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: debounced }),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        if (cancelled) return
+        if (data?.results?.length) {
+          setAiResults(data.results)
+          setAiReason(data.reasoning || '')
+        }
+      })
+      .catch(() => {})
+      .finally(() => { if (!cancelled) setAiBusy(false) })
+
+    return () => { cancelled = true }
+  }, [debounced, results.length])
+
+  const showingAi = results.length === 0 && aiResults && aiResults.length > 0
+
   return (
     <section className="section-sm">
       <div className="container">
@@ -48,7 +81,8 @@ export default function Results() {
 
         <div className="toolbar" style={{ marginTop: 28 }}>
           <div className="count">
-            {results.length} {results.length === 1 ? 'match' : 'matches'}
+            {showingAi ? aiResults.length : results.length}{' '}
+            {(showingAi ? aiResults.length : results.length) === 1 ? 'match' : 'matches'}
             {category ? ` in ${category}` : ''}
             {debounced ? ` for "${debounced}"` : ''}
           </div>
@@ -63,14 +97,30 @@ export default function Results() {
           )}
         </div>
 
-        {results.length === 0 ? (
-          <div className="empty">
-            <h3>No medicines found</h3>
-            <p>Try a different spelling or browse categories above.</p>
+        {showingAi && (
+          <div className="ai-banner">
+            <IconSpark size={16} />
+            <span>
+              No exact match. Showing AI-matched results{aiReason ? ` — ${aiReason}` : ''}.
+            </span>
           </div>
+        )}
+
+        {results.length === 0 && !aiResults ? (
+          aiBusy ? (
+            <div className="empty">
+              <h3><span className="spinner" /> Thinking…</h3>
+              <p>Asking AI to match your query.</p>
+            </div>
+          ) : (
+            <div className="empty">
+              <h3>No medicines found</h3>
+              <p>Try a different spelling or browse categories above.</p>
+            </div>
+          )
         ) : (
           <div className="grid">
-            {results.map((m, i) => (
+            {(showingAi ? aiResults : results).map((m, i) => (
               <MedicineCard key={m.id} med={m} index={i} />
             ))}
           </div>

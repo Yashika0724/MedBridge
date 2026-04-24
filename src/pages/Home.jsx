@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import SearchBar from '../components/SearchBar'
 import CategoryPills from '../components/CategoryPills'
 import MedicineCard from '../components/MedicineCard'
 import medicines from '../data/medicines.json'
+import { IconCamera, IconMic, IconStethoscope, IconSpark, IconArrowRight } from '../components/Icons'
 
 const TRENDING = ['Crocin', 'Dolo 650', 'Augmentin', 'Telma', 'Pan D', 'Shelcal']
 
@@ -80,6 +81,49 @@ export default function Home() {
             <div className="stat">
               <div className="value">16,000+</div>
               <div className="label">Jan Aushadhi stores across India</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingBottom: 0 }}>
+        <div className="container">
+          <div className="toolbar" style={{ marginBottom: 20 }}>
+            <div>
+              <h2 className="section-title" style={{ fontSize: 24 }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                  <IconSpark size={20} /> New — AI-powered tools
+                </span>
+              </h2>
+              <p className="section-sub" style={{ marginBottom: 0 }}>
+                Four ways to find what you actually need.
+              </p>
+            </div>
+          </div>
+          <div className="ai-grid">
+            <Link to="/scan" className="ai-card">
+              <div className="ai-icon"><IconCamera size={22} /></div>
+              <div className="ai-title">Scan prescription</div>
+              <div className="ai-desc">Photograph a doctor's prescription — we read it and find generic equivalents.</div>
+              <div className="ai-cta">Open scanner <IconArrowRight /></div>
+            </Link>
+            <Link to="/ask" className="ai-card">
+              <div className="ai-icon"><IconStethoscope size={22} /></div>
+              <div className="ai-title">Symptom → medicine</div>
+              <div className="ai-desc">Describe a symptom and see the molecule class commonly prescribed for it.</div>
+              <div className="ai-cta">Ask AI <IconArrowRight /></div>
+            </Link>
+            <div className="ai-card" onClick={() => document.querySelector('.search input')?.focus()} role="button" tabIndex={0}>
+              <div className="ai-icon"><IconMic size={22} /></div>
+              <div className="ai-title">Voice search</div>
+              <div className="ai-desc">Tap the mic in the search bar. Speak in Hindi, English, or any Indian language.</div>
+              <div className="ai-cta">Try it above <IconArrowRight /></div>
+            </div>
+            <div className="ai-card" onClick={() => handleSearch('crocine')} role="button" tabIndex={0}>
+              <div className="ai-icon"><IconSpark size={22} /></div>
+              <div className="ai-title">Smart search</div>
+              <div className="ai-desc">Misspellings, regional names, and plain descriptions all work now.</div>
+              <div className="ai-cta">See it in action <IconArrowRight /></div>
             </div>
           </div>
         </div>
