@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Jan Aushadhi Kendra - Connaught Place",
+    "address": "Shop 12, Block A, Connaught Place, New Delhi - 110001",
+    "city": "Delhi",
+    "phone": "011-2334-5671",
+    "lat": 28.6315,
+    "lng": 77.2167
+  },
+  {
+    "id": 2,
+    "name": "Jan Aushadhi Store - Lajpat Nagar",
+    "address": "Near Central Market, Lajpat Nagar II, New Delhi - 110024",
+    "city": "Delhi",
+    "phone": "011-2984-4421",
+    "lat": 28.5672,
+    "lng": 77.2436
+  },
+  {
+    "id": 3,
+    "name": "PMBJP Kendra - Karol Bagh",
+    "address": "Ajmal Khan Road, Karol Bagh, New Delhi - 110005",
+    "city": "Delhi",
+    "phone": "011-2875-1190",
+    "lat": 28.6519,
+    "lng": 77.1909
+  },
+  {
+    "id": 4,
+    "name": "Jan Aushadhi Kendra - Bandra West",
+    "address": "Linking Road, Bandra West, Mumbai - 400050",
+    "city": "Mumbai",
+    "phone": "022-2640-8821",
+    "lat": 19.0596,
+    "lng": 72.8295
+  },
+  {
+    "id": 5,
+    "name": "Jan Aushadhi Store - Andheri East",
+    "address": "Chakala Junction, Andheri East, Mumbai - 400099",
+    "city": "Mumbai",
+    "phone": "022-2832-7711",
+    "lat": 19.1136,
+    "lng": 72.8697
+  },
+  {
+    "id": 6,
+    "name": "PMBJP Kendra - Dadar",
+    "address": "Ranade Road, Dadar West, Mumbai - 400028",
+    "city": "Mumbai",
+    "phone": "022-2430-9921",
+    "lat": 19.0183,
+    "lng": 72.8437
+  },
+  {
+    "id": 7,
+    "name": "Jan Aushadhi Store - T Nagar",
+    "address": "Usman Road, T Nagar, Chennai - 600017",
+    "city": "Chennai",
+    "phone": "044-2432-1187",
+    "lat": 13.0418,
+    "lng": 80.2337
+  },
+  {
+    "id": 8,
+    "name": "Jan Aushadhi Kendra - Anna Nagar",
+    "address": "2nd Avenue, Anna Nagar, Chennai - 600040",
+    "city": "Chennai",
+    "phone": "044-2628-3311",
+    "lat": 13.0850,
+    "lng": 80.2101
+  },
+  {
+    "id": 9,
+    "name": "Jan Aushadhi Store - Jayanagar",
+    "address": "4th Block, Jayanagar, Bangalore - 560011",
+    "city": "Bangalore",
+    "phone": "080-2664-1192",
+    "lat": 12.9250,
+    "lng": 77.5938
+  },
+  {
+    "id": 10,
+    "name": "PMBJP Kendra - Koramangala",
+    "address": "80 Feet Road, 5th Block, Koramangala, Bangalore - 560095",
+    "city": "Bangalore",
+    "phone": "080-2553-8821",
+    "lat": 12.9352,
+    "lng": 77.6245
+  },
+  {
+    "id": 11,
+    "name": "Jan Aushadhi Store - Whitefield",
+    "address": "ITPL Main Road, Whitefield, Bangalore - 560066",
+    "city": "Bangalore",
+    "phone": "080-2845-7711",
+    "lat": 12.9698,
+    "lng": 77.7499
+  },
+  {
+    "id": 12,
+    "name": "Jan Aushadhi Kendra - Banjara Hills",
+    "address": "Road No. 12, Banjara Hills, Hyderabad - 500034",
+    "city": "Hyderabad",
+    "phone": "040-2335-6612",
+    "lat": 17.4126,
+    "lng": 78.4480
+  },
+  {
+    "id": 13,
+    "name": "Jan Aushadhi Store - Ameerpet",
+    "address": "SR Nagar Main Road, Ameerpet, Hyderabad - 500038",
+    "city": "Hyderabad",
+    "phone": "040-2374-1190",
+    "lat": 17.4375,
+    "lng": 78.4483
+  },
+  {
+    "id": 14,
+    "name": "PMBJP Kendra - Salt Lake",
+    "address": "Sector V, Salt Lake, Kolkata - 700091",
+    "city": "Kolkata",
+    "phone": "033-2357-4421",
+    "lat": 22.5805,
+    "lng": 88.4331
+  },
+  {
+    "id": 15,
+    "name": "Jan Aushadhi Store - Gariahat",
+    "address": "Rashbehari Avenue, Gariahat, Kolkata - 700019",
+    "city": "Kolkata",
+    "phone": "033-2464-7719",
+    "lat": 22.5175,
+    "lng": 88.3665
+  },
+  {
+    "id": 16,
+    "name": "Jan Aushadhi Kendra - Kothrud",
+    "address": "Paud Road, Kothrud, Pune - 411038",
+    "city": "Pune",
+    "phone": "020-2528-8812",
+    "lat": 18.5074,
+    "lng": 73.8077
+  },
+  {
+    "id": 17,
+    "name": "PMBJP Kendra - Viman Nagar",
+    "address": "Clover Park Road, Viman Nagar, Pune - 411014",
+    "city": "Pune",
+    "phone": "020-2663-3321",
+    "lat": 18.5679,
+    "lng": 73.9143
+  },
+  {
+    "id": 18,
+    "name": "Jan Aushadhi Store - Navrangpura",
+    "address": "CG Road, Navrangpura, Ahmedabad - 380009",
+    "city": "Ahmedabad",
+    "phone": "079-2656-7712",
+    "lat": 23.0369,
+    "lng": 72.5614
+  },
+  {
+    "id": 19,
+    "name": "Jan Aushadhi Kendra - C Scheme",
+    "address": "Sardar Patel Marg, C Scheme, Jaipur - 302001",
+    "city": "Jaipur",
+    "phone": "0141-237-1190",
+    "lat": 26.9094,
+    "lng": 75.7990
+  },
+  {
+    "id": 20,
+    "name": "Jan Aushadhi Store - Hazratganj",
+    "address": "MG Marg, Hazratganj, Lucknow - 226001",
+    "city": "Lucknow",
+    "phone": "0522-233-4481",
+    "lat": 26.8505,
+    "lng": 80.9445
+  }
+]
